@@ -1,0 +1,9 @@
+glob:binaries/**
+glob:controlShots/**
+glob:screenShots/**
+glob:*.vcproj.*
+glob:Debug/**
+glob:Release/**
+glob:*.pyc
+glob:simbicon.ncb
+glob:simbicon.suo
