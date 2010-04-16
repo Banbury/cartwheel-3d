@@ -26,7 +26,7 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
-				CommandLine="echo Compiling Python interface&#x0D;&#x0A;echo off&#x0D;&#x0A;..\..\lib2\swigwin-1.3.39\swig.exe -python -c++ -o $(InputName)_wrap.cpp $(ProjectDir)$(ProjectName).i&#x0D;&#x0A;"
+				CommandLine="echo Compiling Python interface&#x0D;&#x0A;echo off&#x0D;&#x0A;..\..\lib\swigwin-1.3.39\swig.exe -python -c++ -o $(InputName)_wrap.cpp $(ProjectDir)$(ProjectName).i&#x0D;&#x0A;"
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
@@ -43,7 +43,7 @@
 			<Tool
 				Name="VCCLCompilerTool"
 				Optimization="0"
-				AdditionalIncludeDirectories="..\..\lib2\Python26\include;$(SolutionDir)"
+				AdditionalIncludeDirectories="..\..\lib\Python26\include;$(SolutionDir)"
 				PreprocessorDefinitions="WIN32;_DEBUG;_WINDOWS;_USRDLL;UTILS_EXPORTS;_CRT_SECURE_NO_WARNINGS"
 				MinimalRebuild="true"
 				BasicRuntimeChecks="3"
@@ -64,7 +64,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="..\..\lib2\Python26\libs\python26.lib"
+				AdditionalDependencies="..\..\lib\Python26\libs\python26.lib"
 				OutputFile="$(OutDir)\_$(ProjectName).pyd"
 				LinkIncremental="2"
 				IgnoreDefaultLibraryNames="LIBCMT"
@@ -106,7 +106,7 @@
 			>
 			<Tool
 				Name="VCPreBuildEventTool"
-				CommandLine="echo Compiling Python interface&#x0D;&#x0A;echo off&#x0D;&#x0A;..\..\lib2\swigwin-1.3.39\swig.exe -python -c++ -o $(InputName)_wrap.cpp $(ProjectDir)$(ProjectName).i&#x0D;&#x0A;"
+				CommandLine="echo Compiling Python interface&#x0D;&#x0A;echo off&#x0D;&#x0A;..\..\lib\swigwin-1.3.39\swig.exe -python -c++ -o $(InputName)_wrap.cpp $(ProjectDir)$(ProjectName).i&#x0D;&#x0A;"
 			/>
 			<Tool
 				Name="VCCustomBuildTool"
@@ -124,7 +124,7 @@
 				Name="VCCLCompilerTool"
 				Optimization="2"
 				FavorSizeOrSpeed="1"
-				AdditionalIncludeDirectories="..\..\lib2\Python26\include;$(SolutionDir)"
+				AdditionalIncludeDirectories="..\..\lib\Python26\include;$(SolutionDir)"
 				PreprocessorDefinitions="WIN32;NDEBUG;_WINDOWS;_USRDLL;UTILS_EXPORTS;_CRT_SECURE_NO_WARNINGS"
 				RuntimeLibrary="2"
 				EnableFunctionLevelLinking="true"
@@ -144,7 +144,7 @@
 			/>
 			<Tool
 				Name="VCLinkerTool"
-				AdditionalDependencies="..\..\lib2\Python26\libs\python26.lib"
+				AdditionalDependencies="..\..\lib\Python26\libs\python26.lib"
 				OutputFile="$(OutDir)\_$(ProjectName).pyd"
 				LinkIncremental="1"
 				IgnoreDefaultLibraryNames="LIBCMT"
