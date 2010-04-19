@@ -5,6 +5,8 @@ Basic controller editor
 
 @author: beaudoin
 '''
+import sys
+sys.path += ['.']
 
 import wx, App, math
 
@@ -34,11 +36,15 @@ toolPanel = app.getToolPanel()
 animationToolSet = UI.ToolSets.Animation(toolPanel)
 if not movieSetup:
     optionsToolSet = UI.ToolSets.Options(toolPanel)
+    optionsToolSet._toolSet.setOpen(False)
 cameraToolSet = UI.ToolSets.Camera(toolPanel)
+cameraToolSet._toolSet.setOpen(False)
 instantChar = InstantChar.Model()
 if not movieSetup:
     controllerSnapshotToolSet = UI.ToolSets.SnapshotTree(toolPanel)
+    controllerSnapshotToolSet._toolSet.setOpen(False)
     controllerTreeToolSet = UI.ToolSets.ControllerTree(toolPanel)
+    controllerTreeToolSet._toolSet.setOpen(False)
 
 glCanvas = app.getGLCanvas()
 glCanvas.addGLUITool( UI.GLUITools.CurveEditorCollection )
