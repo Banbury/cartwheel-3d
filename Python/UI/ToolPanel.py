@@ -21,8 +21,8 @@ class ToolSet(wx.Panel):
         
         # Load the bitmaps if needed
         if ToolSet._triUp is None :
-            ToolSet._triUp   = wx.Bitmap('../data/ui/triUp.png',   wx.BITMAP_TYPE_PNG)
-            ToolSet._triDown = wx.Bitmap('../data/ui/triDown.png', wx.BITMAP_TYPE_PNG)
+            ToolSet._triRight = wx.Bitmap('../data/ui/triRight.png',   wx.BITMAP_TYPE_PNG)
+            ToolSet._triDown  = wx.Bitmap('../data/ui/triDown.png', wx.BITMAP_TYPE_PNG)
         
         # Setup a link to the parent, to refresh it when tool sets open or close
         self._parentVBox = parent._vBox
@@ -32,7 +32,7 @@ class ToolSet(wx.Panel):
         self._title.SetBackgroundColour( (180,180,180) )
 
         titleLabel = wx.StaticText(self._title,label=name)        
-        self._titleBitmap = wx.StaticBitmap(self._title, bitmap = ToolSet._triUp )
+        self._titleBitmap = wx.StaticBitmap(self._title, bitmap = ToolSet._triDown )
         
         titleHBox = wx.BoxSizer(wx.HORIZONTAL)
         titleHBox.Add( self._titleBitmap, 0, wx.CENTER | wx.ALL, 3 )
@@ -110,9 +110,9 @@ class ToolSet(wx.Panel):
         except AttributeError:
             self._panel.Show( opened )
         if opened :
-            self._titleBitmap.SetBitmap( ToolSet._triUp )
-        else :
             self._titleBitmap.SetBitmap( ToolSet._triDown )
+        else :
+            self._titleBitmap.SetBitmap( ToolSet._triRight )
         self._parentVBox.Layout()
         self.GetParent().FitInside()
         self.GetParent().Refresh()
